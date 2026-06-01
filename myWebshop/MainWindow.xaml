@@ -1,0 +1,19 @@
+﻿<Window x:Class="myWebshop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myWebshop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top" Height="50" Background="MidnightBlue">
+            <Button Content="New product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox/>
+            <Button Content=""/>
+        </WrapPanel>
+        <StackPanel DockPanel.Dock="Left" Width="200" Background="DimGray"></StackPanel>
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+    </DockPanel>
+</Window>
