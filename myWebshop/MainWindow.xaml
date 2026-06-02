@@ -8,12 +8,28 @@
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <WrapPanel DockPanel.Dock="Top" Height="50" Background="MidnightBlue">
-            <Button Content="New product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox/>
-            <Button Content=""/>
-        </WrapPanel>
-        <StackPanel DockPanel.Dock="Left" Width="200" Background="DimGray"></StackPanel>
+        <Grid DockPanel.Dock="Top" Height="50" Background="MidnightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Create new product" BorderThickness="0" Background="Transparent" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Grid.Column="2" Content="Account" BorderThickness="0" Background="Transparent" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel DockPanel.Dock="Left" Width="200" Background="DimGray">
+            <Expander Header="Categories" Margin="10,0,0,0">
+                <StackPanel>
+                    <CheckBox Content="Filter 1"/>
+                    <CheckBox Content="Filter 2"/>
+                    <CheckBox Content="Filter 3"/>
+                    <CheckBox Content="Filter 4"/>
+                    <CheckBox Content="Filter 5"/>
+                    <CheckBox Content="Filter 6"/>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
         <StackPanel DockPanel.Dock="Right"></StackPanel>
     </DockPanel>
 </Window>
