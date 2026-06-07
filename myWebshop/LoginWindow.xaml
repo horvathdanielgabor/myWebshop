@@ -5,19 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:myWebshop"
         mc:Ignorable="d"
-        Title="myWebshop Login" Height="600" Width="400"
-        WindowStartupLocation="CenterScreen">
-    <StackPanel Margin="20">
+        Title="" Height="600" Width="400"
+        WindowStartupLocation="CenterScreen" MaxWidth="400" MaxHeight="600" MinHeight="600" MinWidth="400">
+    <Window.Resources>
+        <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF030067" Offset="0.1"/>
+            <GradientStop Color="#FF5B99ED" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <StackPanel Margin="20,20,20,0">
         <TextBlock Text="Login for shoping" FontSize="40" TextAlignment="Center"/>
-        <Grid>
+        <Grid Height="200" Margin="0,70,0,70">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock/>
+            <TextBlock
+    Grid.Row="0"
+    HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+    Text="UserName" />
+            <TextBox
+    x:Name="loginUser_TBX"
+    Grid.Row="1"
+                VerticalAlignment="Top"
+    Width="250"
+                Height="32"
+    HorizontalAlignment="Left"/>
+            <TextBlock
+    Grid.Row="2"
+    HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+    Text="Password" />
+            <PasswordBox
+    x:Name="loginPassword_PBX"
+    Grid.Row="3"
+                VerticalAlignment="Top"
+    Width="250"
+                Height="32"
+    HorizontalAlignment="Left" />
         </Grid>
+        <Button x:Name="login_BTN" FontSize="32" Style="{StaticResource roundBTN}" Content="Login"/>
+        <Button x:Name="signUp_BTN" FontSize="32" Margin="0,70,0,0" Content="Sign up here"/>
     </StackPanel>
 </Window>

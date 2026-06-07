@@ -23,5 +23,10 @@ namespace myWebshop
         {
             InitializeComponent();
         }
+
+        private void loginUser_TBX_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

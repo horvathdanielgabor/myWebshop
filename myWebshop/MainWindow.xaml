@@ -7,18 +7,21 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
+    </Window.Resources>
     <DockPanel>
         <Grid DockPanel.Dock="Top" Height="50" Background="MidnightBlue">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Create new product" BorderThickness="0" Background="Transparent" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Grid.Column="0" Content="Create new product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Grid.Column="1" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Grid.Column="2" Content="Account" BorderThickness="0" Background="Transparent" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Grid.Column="2" Content="Account" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <StackPanel DockPanel.Dock="Left" Width="200" Background="DimGray">
+        <StackPanel DockPanel.Dock="Left" Width="150" Background="DimGray">
             <Expander Header="Categories" Margin="10,0,0,0">
                 <StackPanel>
                     <CheckBox Content="Filter 1"/>
@@ -30,6 +33,8 @@
                 </StackPanel>
             </Expander>
         </StackPanel>
-        <StackPanel DockPanel.Dock="Right"></StackPanel>
+        <ScrollViewer x:Name="productView_SCV" DockPanel.Dock="Right" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+
+        </ScrollViewer>
     </DockPanel>
 </Window>
