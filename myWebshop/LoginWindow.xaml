@@ -17,7 +17,7 @@
         </LinearGradientBrush>
     </Window.Background>
     <StackPanel Margin="20,20,20,0">
-        <TextBlock Text="Login for shoping" FontSize="40" TextAlignment="Center"/>
+        <TextBlock Text="Login for shopping" FontSize="38" TextAlignment="Center"/>
         <Grid Height="200" Margin="0,70,0,70">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -29,7 +29,7 @@
     Grid.Row="0"
     HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
-    Text="UserName" />
+    Text="User name" />
             <TextBox
     x:Name="loginUser_TBX"
     Grid.Row="1"
