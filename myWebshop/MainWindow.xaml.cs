@@ -19,6 +19,24 @@ namespace myWebshop
         public MainWindow()
         {
             InitializeComponent();
+
+            loadProducts();
+        }
+
+        private void loadProducts()
+        {
+            productsView_STP.Children.Clear();
+            productsView_STP.Children.Add(new UserControls)
+        }
+
+        private void createProduct_BTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Account_BTN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
