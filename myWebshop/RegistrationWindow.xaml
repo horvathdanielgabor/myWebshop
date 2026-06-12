@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:myWebshop"
         mc:Ignorable="d"
-        Title="" Height="600" Width="400"
-        WindowStartupLocation="CenterScreen" MaxWidth="400" MaxHeight="600" MinHeight="600" MinWidth="400">
+        Title="Registion" Height="620" Width="400"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Resources>
         <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
     </Window.Resources>
@@ -16,55 +16,91 @@
             <GradientStop Color="#FF030067" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <StackPanel Margin="20,20,20,0">
-        <TextBlock Text="Sign up for shopping" FontSize="38" TextAlignment="Center"/>
-        <Grid Height="225" Margin="0,70,0,70">
+    <StackPanel Margin="15,10,15,0">
+        <TextBlock Text="Lépj be a vásárláshoz" FontSize="38" TextAlignment="Center"/>
+        <Grid Height="350" Margin="0,20,0,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock
-            Grid.Row="0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            Text="User name" />
-            <TextBox
-            x:Name="registrateUser_TBX"
-            Grid.Row="1"
-            VerticalAlignment="Top"
-            Width="250"
-            Height="32"
-            HorizontalAlignment="Left"/>
-            <TextBlock
-            Grid.Row="2"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            Text="Password" />
-            <PasswordBox
-            x:Name="registratePassword_PBX"
-            Grid.Row="3"
-            VerticalAlignment="Top"
-            Width="250"
-            Height="32"
-            HorizontalAlignment="Left" />
-            <TextBlock
-            Grid.Row="4"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            Text="Repeat password" />
-            <PasswordBox
-            x:Name="registratePasswordAgain_PBX"
-            Grid.Row="5"
-            VerticalAlignment="Top"
-            Width="250"
-            Height="32"
-            HorizontalAlignment="Left" />
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center">
+                <TextBlock
+                HorizontalAlignment="Left"
+                Text="Felhasználó név" />
+                <TextBox
+                x:Name="registrateUser_TBX"
+                Width="250"
+                Height="32"
+                HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                <TextBlock
+                HorizontalAlignment="Left"
+                Text="Email cím" />
+                <TextBox
+                x:Name="registrateEmail_TBX"
+                Width="250"
+                Height="32"
+                HorizontalAlignment="Left"/>
+            </StackPanel>
+            <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        Text="Keresztnév"/>
+                    <TextBox
+                        x:Name="registrateFirstName_TBX"
+                        Width="125"
+                        Height="32"
+                        HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        Text="Vezetéknév"/>
+                    <TextBox
+                        x:Name="registrateLastName_TBX"
+                        Width="125"
+                        Height="32"
+                        HorizontalAlignment="Left"/>
+                </StackPanel>
+            </WrapPanel>
+            <WrapPanel Grid.Row="3" HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock
+                    HorizontalAlignment="Left"
+                    Text="Jelszó" />
+                    <PasswordBox
+                    x:Name="registratePassword_PBX"
+                    Width="125"
+                    Height="32"
+                    HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock
+                    HorizontalAlignment="Left"
+                    Text="Jelszó újra" />
+                    <PasswordBox
+                    x:Name="registratePasswordAgain_PBX"
+                    Width="125"
+                    Height="32"
+                    HorizontalAlignment="Left" />
+                </StackPanel>
+            </WrapPanel>
+            <StackPanel Grid.Row="4" HorizontalAlignment="Center">
+                <TextBlock
+                HorizontalAlignment="Left"
+                Text="Szerepkör" />
+                <Border CornerRadius="10" BorderThickness="1" BorderBrush="LightGray" Background="White" Width="250" Padding="3">
+                    <ComboBox x:Name="Role_CBX">
+                    </ComboBox>
+                </Border>
+            </StackPanel>
         </Grid>
-        <Button x:Name="login_BTN" FontSize="32" Style="{StaticResource roundBTN}" Content="Registrate"/>
-        <Button x:Name="signUp_BTN" FontSize="32" Margin="0,50,0,0" Content="Login here"/>
+        <Button x:Name="signUp_BTN" Click="signUp_BTN_Click" FontSize="32" Style="{StaticResource roundBTN}" Content="Regisztálás"/>
+        <Button x:Name="login_BTN" Click="login_BTN_Click" FontSize="32" Style="{StaticResource linkBTN}" Margin="0,30,0,0" Content="Jelentkezbe itt"/>
     </StackPanel>
 </Window>

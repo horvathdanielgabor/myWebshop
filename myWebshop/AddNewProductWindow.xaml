@@ -1,0 +1,63 @@
+﻿<Window x:Class="myWebshop.AddNewProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myWebshop"
+        mc:Ignorable="d"
+        Title="AddNewProductWindow" Height="420" Width="600" WindowStartupLocation="CenterScreen"
+        Background="DodgerBlue" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
+    </Window.Resources>
+    <StackPanel Margin="10,10,10,10">
+        <Grid Height="325">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.1*"/>
+                <RowDefinition Height="1.1*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.5*"/>
+                    <ColumnDefinition Width="2.25*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.75*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                    <TextBlock FontSize="18" Margin="5,0,0,0" Text="Termék neve"/>
+                    <TextBox x:Name="name_TBX" Width="150" FontSize="18" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="10,0,10,0">
+                    <TextBlock FontSize="18" Margin="5,0,0,0" Text="Ára (Ft)"/>
+                    <TextBox x:Name="price_TBX" PreviewTextInput="NumberOnly_PreviewTextInput" DataObject.Pasting="NumberOnly_Pasting" Width="75" FontSize="18" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                    <TextBlock FontSize="18" Margin="5,0,0,0" Text="Mennyiség"/>
+                    <TextBox x:Name="stockQuantity_TBX" PreviewTextInput="NumberOnly_PreviewTextInput" DataObject.Pasting="NumberOnly_Pasting" Width="100" FontSize="18" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3" HorizontalAlignment="Center" Margin="10,0,10,0">
+                    <TextBlock FontSize="18" Margin="5,0,0,0" Text="Márka"/>
+                    <TextBox x:Name="brand_TBX" Width="100" FontSize="18" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Grid.Column="4" HorizontalAlignment="Center">
+                    <TextBlock FontSize="18" Margin="5,0,0,0" Text="Súly (g)"/>
+                    <TextBox x:Name="weight_TBX" PreviewTextInput="NumberOnly_PreviewTextInput" DataObject.Pasting="NumberOnly_Pasting" Width="60" FontSize="18" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <TextBlock FontSize="18" Text="Kategória (ha több kategoriát akarsz akkor használj ';'!)"/>
+                <TextBox x:Name="category_TBX" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock FontSize="18" Text="Leírás"/>
+                <TextBox x:Name="description_TBX" Height="175" TextAlignment="Left" VerticalAlignment="Top" FontSize="18"/>
+            </StackPanel>
+        </Grid>
+        <WrapPanel Margin="0,5,0,0">
+            <Button x:Name="close_BTN" Click="close_BTN_Click" Style="{StaticResource roundBTN}" Content="Ablak bezárása"/>
+            <Button x:Name="newProduct" Click="newProduct_Click" Style="{StaticResource roundBTN}" Content="Új termék hozzáadása"/>
+        </WrapPanel>
+    </StackPanel>
+</Window>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:myWebshop"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Window.Resources>
         <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
     </Window.Resources>
@@ -17,19 +17,12 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="createProduct_BTN" Click="createProduct_BTN_Click" Grid.Column="0" Content="Create new product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="1" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button x:Name="Account_BTN" Click="Account_BTN_Click" Grid.Column="2" Content="Account" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="createProduct_BTN" Click="createProduct_BTN_Click" Grid.Column="0" Style="{StaticResource linkBTN}" Content="Hozzon létre új terméket" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="Account_BTN" Click="Account_BTN_Click" Grid.Column="2" Style="{StaticResource linkBTN}" Content="Fiók" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <StackPanel DockPanel.Dock="Left" Width="150" Background="DimGray">
-            <Expander Header="Categories" Margin="10,0,0,0">
-                <StackPanel>
-                    <CheckBox Content="Filter 1" Tag="#XD"/>
-                    <CheckBox Content="Filter 2"/>
-                    <CheckBox Content="Filter 3"/>
-                    <CheckBox Content="Filter 4"/>
-                    <CheckBox Content="Filter 5"/>
-                    <CheckBox Content="Filter 6"/>
+            <Expander Header="Kategóriák" Margin="10,0,0,0">
+                <StackPanel x:Name="filters_STP">
                 </StackPanel>
             </Expander>
         </StackPanel>

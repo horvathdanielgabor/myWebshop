@@ -5,12 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLite;
 
-namespace myWebshop.Model
+namespace myWebshop.Models
 {
-    internal class Customer
+    public class Customer
     {
+        public Customer()
+        {
+
+        }
+
         [PrimaryKey, AutoIncrement]
-        private int Id {  get; set; }
+        public int Id { get; set; }
         private int _UserId;
         private string _PhoneNumber;
         private string _Address;
@@ -19,15 +24,9 @@ namespace myWebshop.Model
         private DateTime _BirthDate;
         private int _LoyaltyPoints;
 
-        public Customer( int userId, string phoneNumber, string address, string city, string country, DateTime birthDate, int loyaltyPoints)
+        public Customer( int userId)
         {
             _UserId = userId;
-            _PhoneNumber = phoneNumber;
-            _Address = address;
-            _City = city;
-            _Country = country;
-            _BirthDate = birthDate;
-            _LoyaltyPoints = loyaltyPoints;
         }
 
         public int UserId { get => _UserId; set => _UserId = value; }

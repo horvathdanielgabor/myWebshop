@@ -16,11 +16,14 @@
             IsReadOnly="True"
             SelectionChanged="dataGridProducts_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Product}" Header="Felhasználó név" />
-                <DataGridTextColumn Binding="{Binding Jelszo}" Header="Jelszó" />
-                <DataGridTextColumn Binding="{Binding TeljesNev}" Header="Teljes név" />
-                <DataGridTextColumn Binding="{Binding Szerepkor}" Header="Szerepkör" />
-                <DataGridTextColumn Binding="{Binding SzerepkorNev}" Header="Szerepkör név" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Termék neve" />
+                <DataGridTextColumn Binding="{Binding Price}" Header="Ár (Ft)" />
+                <DataGridTextColumn Binding="{Binding StockQuantity}" Header="Mennyiség" />
+                <DataGridTextColumn Binding="{Binding Category}" Header="Kategória(k)" />
+                <DataGridTextColumn Binding="{Binding Brand}" Header="Márka" />
+                <DataGridTextColumn Binding="{Binding Weight}" Header="Súly (g)" />
+                <DataGridTextColumn Binding="{Binding IsAvailable}" Header="Elérhető-e" />
+                <DataGridTextColumn Binding="{Binding CreatedAt}" Header="Megjelenés dátuma" />
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

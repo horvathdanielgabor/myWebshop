@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace myWebshop.Model
+namespace myWebshop.Models
 {
     internal interface IGenericRepository<T> where T : new()
     {

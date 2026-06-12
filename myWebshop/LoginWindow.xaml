@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:myWebshop"
         mc:Ignorable="d"
-        Title="" Height="600" Width="400"
-        WindowStartupLocation="CenterScreen" MaxWidth="400" MaxHeight="600" MinHeight="600" MinWidth="400">
+        Title="Login" Height="620" Width="400"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Resources>
         <ResourceDictionary Source="/Resources/Main_RD.xaml"/>
     </Window.Resources>
@@ -17,7 +17,7 @@
         </LinearGradientBrush>
     </Window.Background>
     <StackPanel Margin="20,20,20,0">
-        <TextBlock Text="Login for shopping" FontSize="38" TextAlignment="Center"/>
+        <TextBlock Text="Lépj be a vásárláshoz" FontSize="38" TextAlignment="Center"/>
         <Grid Height="200" Margin="0,70,0,70">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -29,7 +29,7 @@
     Grid.Row="0"
     HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
-    Text="User name" />
+    Text="Felhasználó név" />
             <TextBox
     x:Name="loginUser_TBX"
     Grid.Row="1"
@@ -41,7 +41,7 @@
     Grid.Row="2"
     HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
-    Text="Password" />
+    Text="Jelszó" />
             <PasswordBox
     x:Name="loginPassword_PBX"
     Grid.Row="3"
@@ -50,7 +50,7 @@
                 Height="32"
     HorizontalAlignment="Left" />
         </Grid>
-        <Button x:Name="login_BTN" FontSize="32" Style="{StaticResource roundBTN}" Content="Login"/>
-        <Button x:Name="signUp_BTN" FontSize="32" Margin="0,70,0,0" Content="Sign up here"/>
+        <Button x:Name="login_BTN" Click="login_BTN_Click" FontSize="32" Style="{StaticResource roundBTN}" Content="Bejelentkezés"/>
+        <Button x:Name="signUp_BTN" Click="signUp_BTN_Click" FontSize="32" Style="{StaticResource linkBTN}" Margin="0,70,0,0" Content="Regisztálás itt"/>
     </StackPanel>
 </Window>
